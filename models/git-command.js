@@ -9,8 +9,11 @@ class GitCommand {
         return "Initialized as empty Git repository.";
     }
 
-    //Command: git status
-    // status(){}
+    // Command: git status
+    status(){
+        if(this.working_directory == '.')
+        return true
+    }
 
     //Command: git add <filename/file directory/wildcard> 
     add(path_file){
@@ -23,6 +26,9 @@ class GitCommand {
         /*
             Create logic here and run unit testing.
         */
+       else if(modified_files[path_file] == 'Successfully added as index file/s.'){
+        return true
+       }
         else{
             return `Failed to add ${path_file}! File is not modified or missing.`;
         }
