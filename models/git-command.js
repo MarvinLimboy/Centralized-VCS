@@ -52,3 +52,6 @@ class GitCommand {
 
 
 module.exports = GitCommand;
+
+
+//New features
